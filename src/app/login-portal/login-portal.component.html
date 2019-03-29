@@ -1,0 +1,76 @@
+
+<div class="text">
+    <p> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text. </p>
+</div>
+
+<!--Naked Form-->
+<div class="card-block">
+
+  <hr class="mt-2 mb-2" style="margin-right: 5%;margin-left: 5%;">
+
+    <!--Header-->
+    <div id="form">
+    
+      <div class="text-center" class="header">
+        <h1 class="text-center"> Log In To Your Account</h1>
+      </div>
+
+      <div (focusout)="focusFunction($event)" class="md-form text-center group">
+        <input type="text" #medName><span class="highlight"></span><span class="bar"></span>
+        <label id="cred_user"><i class="fa fa-user prefix"></i> Username</label>
+      </div>
+
+      <div (focusout)="focusFunction($event)" class="md-form text-center group">
+        <input type="password" #medPass><span class="highlight"></span><span class="bar"></span>
+        <label id="cred_pass"><i class="fa fa-lock prefix"></i> Password</label>
+      </div>
+    
+      <div class="text-center">
+        <button (click)="ruleDesigner($event)" class="text-center" class="med-login-button">
+          Rule Designer?
+        </button>
+        <button (click)="ruleAdmin($event)" class="text-center" class="med-login-button">
+          Rule Engine Administrator?
+        </button>
+        <button (click)="userLogin($event)" class="text-center" class="med-login-button">
+          User Login?
+        </button>
+
+        <p class="f-text text-center" data-toggle="modal" data-target="#addUser">Forgot password?</p>
+        
+      </div>
+  
+    </div>
+
+    <hr class="mt-2 mb-2" style="margin-right: 5%;margin-left: 5%;">
+
+</div>
+
+
+  <!--Modal Design Code to be displayed when clicked on Add Button-->
+  <div class="modal fade" id="addUser" role="dialog" aria-labelledby="myModalLabel">
+
+    <div class="modal-dialog modal-lg" role="document">
+  
+  
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h3 class="modal-title w-100" id="myModalLabel">Forgot your password?</h3>
+          
+        </div>
+        <div class="modal-body">
+          <p class="text">Don't worry. Resetting your password is easy, just tell us the username/email address you regitered with us.</p>
+          <input type="text" id="f-input">
+        </div>
+  
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success btn-size resetPass" data-dismiss="modal"  (click)='resetPassword($event)'>Request Password</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<router-outlet></router-outlet>

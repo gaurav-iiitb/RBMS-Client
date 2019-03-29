@@ -1,0 +1,86 @@
+
+<div class="text">
+    <p> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text. </p>
+</div>
+
+<div class='form'>
+    
+  <mat-form-field>
+    <input matInput placeholder="First Name" #fname>
+  </mat-form-field>
+  
+  <mat-form-field>
+      <input matInput placeholder="Middle Name" #mname>
+  </mat-form-field>
+  
+  <mat-form-field>
+      <input matInput placeholder="Last Name" #lname>
+  </mat-form-field>
+
+  <mat-form-field>
+      <input matInput placeholder="DOB" #dob>
+  </mat-form-field>
+  
+  <mat-form-field>
+      <input matInput placeholder="Primary Contact Number" #phone>
+  </mat-form-field>
+  
+  <mat-form-field>
+      <input matInput placeholder="Primary Email ID" #email>
+  </mat-form-field>
+  
+  <mat-form-field>
+      <input matInput placeholder="Address" #add>
+  </mat-form-field>
+  
+  <mat-form-field>
+      <input matInput placeholder="City" #city>
+  </mat-form-field>
+  
+  <mat-form-field>
+      <input matInput placeholder="State" #state>
+  </mat-form-field>
+  
+  <mat-form-field>
+      <input matInput placeholder="Pincode" #pin>
+  </mat-form-field>
+  
+  <mat-form-field>
+      <input matInput placeholder="Pan Card Number" #pan>
+  </mat-form-field>
+  
+  <mat-form-field>
+      <input matInput placeholder="Aadhar Card Number" #aadhar>
+  </mat-form-field>
+  
+  </div>
+
+  <div>
+      <p class="text">Account Details</p>
+  
+      <div class='b'>
+          <mat-form-field>
+              <mat-label class="form-text">Account Type</mat-label>
+              <mat-select [(value)]="acc_type">
+                <mat-option>None</mat-option>
+                <mat-option value="Savings">Savings</mat-option>
+                <mat-option value="Current">Current</mat-option>
+              </mat-select>
+          </mat-form-field>
+        
+          
+          <mat-form-field>
+              <input matInput placeholder="Auto Generated Acc_Num" [(ngModel)]="acc_num" disabled>  
+          </mat-form-field>
+      
+        <mat-form-field>
+            <input matInput placeholder="Initial Amount" #amt>
+        </mat-form-field>
+
+      </div>
+       
+  </div>
+
+  <div>
+        <button type="button" class="btn btn-success btn-size btn-text" (click)='createUser($event)'>Save Changes</button>
+  </div>   

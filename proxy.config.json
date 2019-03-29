@@ -1,0 +1,6 @@
+{
+    "/maven": {
+      "target": "http://172.16.128.188:8090/",
+      "secure": false
+    }
+}

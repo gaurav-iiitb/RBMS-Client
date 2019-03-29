@@ -1,0 +1,28 @@
+
+#med-head {
+    font-size: xx-large;
+    color: beige;
+    float: left;
+}
+
+.med-span {
+    font-size: x-large;
+}
+
+.container-fluid {
+    padding-top: 23px;
+    text-align: center;
+    height: 100px;
+    font-size: x-large;
+}
+
+
+#logout {
+    float: right;
+    width: 45px;
+    height: 45px;
+    margin-top: 5px;
+    right: 2%;
+    margin-left: 930px;
+    cursor: pointer;
+}

@@ -1,0 +1,23 @@
+.text {
+    font-family: 'Lato', sans-serif;
+    font-size: medium;
+    margin: 2%;
+    text-align: justify;
+}
+
+.form {
+    margin-left: 5%;
+}
+
+mat-form-field {
+    margin-right: 10%;
+}
+
+.b {
+    margin-left: 5%;
+}
+
+.btn {
+    margin-left: 2%;
+    margin-top: 2%;
+}

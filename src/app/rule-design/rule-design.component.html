@@ -1,0 +1,69 @@
+
+<!--Dummy Text-->
+<div class="file-text">Rule Design Platform</div>
+<div class="text">
+      <p> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+</div>
+
+<div class="text">
+    <p>Antecedent </p>
+</div>
+
+
+<div id="portal">
+
+    <mat-form-field>
+        <mat-label class="form-text">Type</mat-label>
+        <mat-select [(value)]="type">
+          <mat-option>None</mat-option>
+          <mat-option value="Real Time">RT</mat-option>
+          <mat-option value="Batch Processing">BP</mat-option>
+          </mat-select>
+      </mat-form-field>
+
+  <mat-form-field>
+    <mat-label class="form-text">Element</mat-label>
+    <mat-select [(value)]="element">
+      <mat-option>None</mat-option>
+      <mat-option value="Balance">Balance</mat-option>
+      <mat-option value="Credit Score">Credit Score</mat-option>
+      <mat-option value="Last Transaction on">Last Transaction on</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+      <mat-label class="form-text">Operation</mat-label>
+      <mat-select [(value)]="operation">
+        <mat-option>None</mat-option>
+        <mat-option value="Greater than Equal to">>=</mat-option>
+        <mat-option value="Less than Equal to"><=</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label class="form-text">Value</mat-label>
+        <mat-select [(value)]="value">
+          <mat-option>None</mat-option>
+          <mat-option value="Rs 10,00,000">1000000</mat-option>
+          <mat-option value="Rs 5,00,000">500000</mat-option>
+          
+        </mat-select>
+      </mat-form-field>
+   
+</div>
+
+
+<div class="text">
+    <p>Consequent </p>
+</div>
+
+  <div id='portal'>
+    <mat-form-field>
+        <textarea matInput placeholder="Enter Action in SQL Format" #action></textarea>
+    </mat-form-field>
+  </div>
+
+  
+  <div class='create-rule'>
+      <button type="button" class="btn btn-success btn-size btn-text" data-dismiss="modal"  (click)='createRule($event)'>Create Rule</button>
+  </div>

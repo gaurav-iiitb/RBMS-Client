@@ -1,0 +1,65 @@
+
+.partition {
+    height: 600px;
+    border-left: 1px solid black;
+    margin-left: 50%;
+    margin-top: -22%;
+}
+
+.account-number {
+    margin-left: 15%;
+    margin-top: 1%;
+    width: 220px;
+}
+
+.get-details {
+    margin-left: 15%;
+    width: 220px;
+    padding: 8px;
+    display: inline-block;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 130%;
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: black;
+    box-shadow: none;
+    font-size: medium;
+}
+
+#create-user {
+    float: right;
+    margin-right: 18%;
+    margin-top: -3.7%;
+}
+
+
+.text {
+    font-family: 'Lato', sans-serif;
+    font-size: medium;
+    margin: 2%;
+    text-align: justify;
+}
+
+.a {
+    width: 40%;
+    height: 30%;
+    margin-top: 10%;
+    margin-left: 5%;
+    text-align: justify;
+}
+
+.b {
+    float: right;
+    width: 40%;
+    height: 30%;
+    margin-top: -7%;
+    margin-right: 5%;
+    text-align: justify;
+}
+
+#acc_no {
+    width: 100%;
+}

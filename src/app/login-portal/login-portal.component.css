@@ -1,0 +1,268 @@
+
+.med-login-button {
+
+    width: 220px;
+    padding: 8px;
+    display: inline-block;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 130%;
+    color: #999;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 10px;
+    background-color: black;
+    box-shadow: none;
+    font-size: large;
+}
+
+.med-login-button:hover {
+    color: white;
+}
+
+.text {
+    font-family: 'Lato', sans-serif;
+    font-size: medium;
+    margin: 2%;
+    text-align: justify;
+}
+
+.f-text {
+    font-family: 'Lato', sans-serif;
+    font-size: medium;
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: -1%;
+    text-align: justify;
+    /*color: blue;*/
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.header {
+    /* margin: -3em -4em -2em -0em; */
+    border: 1px solid black;
+    /* width: 100%; */
+    height: 90px;
+    margin-bottom: 35px;
+    margin-left: -29px;
+    margin-right: -29px;
+    margin-top: -42px;
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    padding-top: 1.5%;
+    font-family: 'Lato', sans-serif;
+    font-size: x-large;
+}
+
+hr {
+    height: 1px;
+    
+}
+
+*:focus{
+    outline: none;
+}
+
+.btn {
+    font-size: 125%;
+    margin: 1%;
+}
+#form {
+    width: 55%;
+    padding: 3em 2em 2em 2em;
+	margin: 2em auto;
+	background: white;
+	border: 1px solid #ebebeb;
+	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
+}
+
+.group { 
+	position: relative; 
+	margin-bottom: 45px; 
+}
+
+input[type=text], input[type=password] {
+	font-size: medium;
+	padding: 10px 10px 10px 5px;
+	-webkit-appearance: none;
+	display: block;
+	background: white;
+	color: black;
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid black;
+}
+
+
+input:focus { outline: none; }
+
+
+label {
+	color: #999; 
+	font-size: large;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 5px;
+    top: 10px;
+    font-family: 'Lato', sans-serif;
+	transition: all 0.4s ease;
+}
+
+input :not([value=" "]){
+    top: -20px;
+    transform: scale(.75); left: -10px;
+	font-size: 19px; 
+	color: red;
+}
+
+
+input:focus ~ label, input.used ~ label {
+    top: -20px;
+    transform: scale(.75); left: -10px;
+	font-size: 19px; 
+	color: black;
+}
+
+.transition {
+    top: -20px;
+    transform: scale(.75); left: -10px;
+	font-size: 19px; 
+	color: black;
+}
+  
+
+/* Modal Styling Properties **/
+#med-modal {
+    z-index: 9999;
+    background-color: transparent;
+}
+
+.modal-dialog {
+    margin-top: 10%;
+}
+
+input[type="checkbox"]
+{
+    vertical-align:middle;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.modal-button {
+
+    width: 100px;
+    padding: 8px;
+    display: inline-block;
+    border: 1px solid #202020;
+    border-radius: 5px;
+    font-family: Verdana;
+    font-size: 130%;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 10px;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+.med-name {
+    font-size: small;
+}
+
+.med-modal-img {
+    width: 20%;
+    height: 95%;
+    float: left;
+    margin-right: 2%;
+}
+
+.modal-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    margin-bottom: 4%; 
+    margin-right: 4%;     
+    text-align: justify;
+}
+
+#med-user-card {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+#med-file-list {
+    width: 200px;
+}
+
+.med-label {
+    width: 160px;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    margin-right: -3%;
+}
+
+h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: x-large;
+}
+
+.med-add-img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    float: right;
+    margin-right: 1%; 
+    margin-top: -1%;
+}
+
+.user-li {
+    display: inline-block;
+}
+
+.med-category {
+    
+    float: right;
+    width: 250px;
+    margin-right: 3%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+      
+}
+
+/*Mat Tab Styling*/
+::ng-deep .mat-tab-labels .mat-tab-label-content {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    font-family: Lato;
+    font-size: large;
+}
+
+::ng-deep .mat-tab-header {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+}
+
+#f-input {
+    margin-left: 2%;
+    width: 50%;
+}
+
+.resetPass {
+    margin-top: -0.3;
+}

@@ -1,0 +1,28 @@
+<div>
+
+  <div class='a'> 
+      <p> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text. </p>
+  </div>
+
+  <div class='b'> 
+      <p> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text. </p>
+  </div>
+
+
+  <div>
+    <div class='account-number'>
+      <textarea placeholder="Enter Account Number" id='acc_no' #acc_no></textarea><br>
+    </div>
+    <button class='get-details' (click)='getAccount($event)'>Get Account Details</button>
+  </div>
+
+
+  <div>
+      <button class='get-details' (click)='createUser($event)' id='create-user'>Create User</button>
+  </div>
+
+</div>
+
+<div class='partition'></div>
+  
+<router-outlet></router-outlet>
