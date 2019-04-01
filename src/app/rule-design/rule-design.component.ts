@@ -9,6 +9,7 @@ import { RuleDesignService } from './../services/ruledesign.service';
 })
 export class RuleDesignComponent implements OnInit {
 
+  private table: any;
   private element: any;
   private operation: any;
   private value: any;
@@ -24,6 +25,7 @@ export class RuleDesignComponent implements OnInit {
   async createRule(event: any) {
 
     var data = {
+      table: this.table,
       type: this.type,
       element: this.element,
       operation: this.operation,
@@ -34,9 +36,10 @@ export class RuleDesignComponent implements OnInit {
     this.message = await this.getAsyncPromise(data)
     console.log(this.message)
     if(this.message==true) {
+      this.table = 'None';
       this.element = 'None'; this.operation = 'None';
       this.type = 'None'; this.value = 'None';
-      this.action.nativeElement.value = 'None';
+      this.action.nativeElement.value = '';
       alert('Rule Successfully Added to the XML Document.');
     } else {
       alert('There was some issue updating the Rule Based XML Doc. Please try again after sometime or try contacting the administrator.');

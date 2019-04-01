@@ -12,12 +12,21 @@
 
 <div id="portal">
 
+  <mat-form-field>
+    <mat-label class="form-text">Table</mat-label>
+    <mat-select [(value)]="table">
+      <mat-option>None</mat-option>
+      <mat-option value="Account">Account</mat-option>
+      <mat-option value="Transaction">Transaction</mat-option>
+      </mat-select>
+  </mat-form-field>
+
     <mat-form-field>
         <mat-label class="form-text">Type</mat-label>
         <mat-select [(value)]="type">
           <mat-option>None</mat-option>
-          <mat-option value="Real Time">RT</mat-option>
-          <mat-option value="Batch Processing">BP</mat-option>
+          <mat-option value="RT">RT</mat-option>
+          <mat-option value="BP">BP</mat-option>
           </mat-select>
       </mat-form-field>
 
@@ -35,8 +44,8 @@
       <mat-label class="form-text">Operation</mat-label>
       <mat-select [(value)]="operation">
         <mat-option>None</mat-option>
-        <mat-option value="Greater than Equal to">>=</mat-option>
-        <mat-option value="Less than Equal to"><=</mat-option>
+        <mat-option value=">=">>=</mat-option>
+        <mat-option value="<="><=</mat-option>
       </mat-select>
     </mat-form-field>
 
@@ -44,8 +53,8 @@
         <mat-label class="form-text">Value</mat-label>
         <mat-select [(value)]="value">
           <mat-option>None</mat-option>
-          <mat-option value="Rs 10,00,000">1000000</mat-option>
-          <mat-option value="Rs 5,00,000">500000</mat-option>
+          <mat-option value="1000000">1000000</mat-option>
+          <mat-option value="500000">500000</mat-option>
           
         </mat-select>
       </mat-form-field>
