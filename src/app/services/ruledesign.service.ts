@@ -12,7 +12,8 @@ export class RuleDesignService implements OnInit {
 
   readonly ROOT_URL_RULE = 'http://172.16.128.188:8090/createRule';
   readonly ROOT_URL_USER = 'http://172.16.128.188:8090/createUser';
-  
+  readonly ROOT_URL_INIT = 'http://172.16.128.188:8090/init';
+
   private acc_number: any;
   
   constructor(private http: HttpClient) { }
@@ -36,6 +37,10 @@ export class RuleDesignService implements OnInit {
 
   getAccNumber() {
     return this.acc_number;
+  }
+
+  initialize() {
+    return this.http.get(this.ROOT_URL_INIT);
   }
 
 }

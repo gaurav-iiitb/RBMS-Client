@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 import 'rxjs/add/operator/take'; 
+import { RuleDesignService } from '../services/ruledesign.service';
 
 @Component({
   selector: 'app-login-portal',
@@ -17,7 +18,7 @@ export class LoginPortalComponent implements OnInit {
   response: any;
   response_string: String;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private rule: RuleDesignService) { }
 
   ngOnInit() {
   
@@ -46,13 +47,40 @@ export class LoginPortalComponent implements OnInit {
   //When Clicked on Rule Designer
   async ruleDesigner(event: any) { 
 
-    console.log();
-    console.log(this.medPassword.nativeElement.value);
-    if(this.medUsername.nativeElement.value=='admin' && this.medPassword.nativeElement.value=='admin')
-      this.router.navigate(['login-portal/rule-design']);
+    if(this.medUsername.nativeElement.value=='admin' && this.medPassword.nativeElement.value=='admin') {
+
+      let message = await this.AsyncResponse()
+      console.log(message)
+      if(message==true) {
+        this.router.navigate(['login-portal/rule-design']);
+      } else {
+        alert('There was some issue. Please try again after some time.');
+      }
+    }
+      
     else
       alert('Incorrect Credentials.');
   } 
+
+
+  //Handles Async promises during Init
+  AsyncResponse() {
+
+    const hasError:any = false;
+    let promise = new Promise((resolve, reject) => {
+      
+      this.rule.initialize().subscribe(val => {
+
+        if(hasError) {
+          reject();
+        } else {
+          resolve(val);
+        }
+      });
+    });
+
+    return promise;
+  }
 
   //When clicked on Rule Administrator
   async ruleAdmin(event: any) {
