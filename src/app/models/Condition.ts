@@ -6,21 +6,21 @@ export class Condition
 {
     private element: string;
     private conjunction: string;
-    private clause: Clause[] = new Array();
+    private clauseList: Clause[] = new Array();
      
     constructor(element: string, conjunction: string, clause: Clause[]) 
     {
         this.element = element;
         this.conjunction = conjunction;
-        this.clause = clause;
+        this.clauseList = clause;
     }
 
     setClause(clause: Clause) {
-        this.clause.push(clause);
+        this.clauseList.push(clause);
     }
 
     getClause() {
-        return this.clause;
+        return this.clauseList;
     }
     
 }
