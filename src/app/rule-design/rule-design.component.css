@@ -38,10 +38,41 @@
     margin-left: 5%;
 }
 
-mat-form-field{
-    margin-right: 4%;
-}
-
 .create-rule {
     margin-left: 2.5%;
+}
+
+.shift-left {
+    margin-left: -2.5%;
+}
+
+.shift-left-half {
+    margin-left: -2px;
+}
+
+.shift-up {
+    margin-top: -1.2%;
+}
+.mat-radio {
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.shift-right {
+    margin-left: 1%;
+}
+
+mat-form-field {
+    width: 35%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    margin-right: 10%;
+}
+
+.field-a {
+    width: 40%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    margin-right: 10%;
 }

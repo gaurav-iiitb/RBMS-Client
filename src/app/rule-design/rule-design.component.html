@@ -5,7 +5,7 @@
       <p> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
 </div>
 
-<div class="text">
+<div class="file-text">
     <p>Antecedent </p>
 </div>
 
@@ -28,41 +28,17 @@
           <mat-option value="RT">RT</mat-option>
           <mat-option value="BP">BP</mat-option>
           </mat-select>
-      </mat-form-field>
-
-  <mat-form-field>
-    <mat-label class="form-text">Element</mat-label>
-    <mat-select [(value)]="element">
-      <mat-option>None</mat-option>
-      <mat-option value="Balance">Balance</mat-option>
-      <mat-option value="Credit Score">Credit Score</mat-option>
-      <mat-option value="Last Transaction on">Last Transaction on</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field>
-      <mat-label class="form-text">Operation</mat-label>
-      <mat-select [(value)]="operation">
-        <mat-option>None</mat-option>
-        <mat-option value=">=">>=</mat-option>
-        <mat-option value="<="><=</mat-option>
-      </mat-select>
     </mat-form-field>
+    
+    <div class='create-rule shift-left'>
+        <button type="button" class="btn btn-success btn-size btn-text" data-target="#filter" data-toggle="modal">Add Element Filter</button>
+        <p class="text shift-left-half shift-up"> (Multiple filters can be applied. Click on the button above required number of times to apply filter on multiple elements.) </p>
+      </div> 
 
-    <mat-form-field>
-        <mat-label class="form-text">Value</mat-label>
-        <mat-select [(value)]="value">
-          <mat-option>None</mat-option>
-          <mat-option value="1000000">1000000</mat-option>
-          <mat-option value="500000">500000</mat-option>
-          
-        </mat-select>
-      </mat-form-field>
-   
-</div>
+  </div>
 
 
-<div class="text">
+<div class="file-text">
     <p>Consequent </p>
 </div>
 
@@ -76,3 +52,91 @@
   <div class='create-rule'>
       <button type="button" class="btn btn-success btn-size btn-text" data-dismiss="modal"  (click)='createRule($event)'>Create Rule</button>
   </div>
+
+    <!--Modal for Custom Auto Filter-->
+    <div class="modal fade" id="filter" role="dialog" aria-labelledby="myModalLabel">
+  
+      <div class="modal-dialog modal-lg" role="document">
+    
+    
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h3 class="modal-title w-100" id="myModalLabel">Custom Filter Dialog</h3>
+            
+          </div>
+          <div class="modal-body shift-right">
+
+            <div>
+              <mat-form-field class="field-a">
+                <mat-label>Element</mat-label>
+                <mat-select [(value)]="element">
+                  <mat-option>None</mat-option>
+                  <mat-option value="Balance">Balance</mat-option>
+                  <mat-option value="Credit Score">Credit Score</mat-option>
+                  <mat-option value="Last Transaction on">Last Transaction on</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+            <div>
+        
+              <mat-form-field class="field-a">
+                  <mat-label>Operation</mat-label>
+                  <mat-select [(value)]="op1">
+                    <mat-option>None</mat-option>
+                    <mat-option value=">=">>=</mat-option>
+                    <mat-option value=">">></mat-option>
+                    <mat-option value="<="><=</mat-option>
+                    <mat-option value="<"><</mat-option>
+                    <mat-option value="==">==</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="field-a">
+                  <input matInput placeholder="Value" #ip1>    
+                    
+                </mat-form-field>
+                
+              </div>
+
+                <div>
+                <mat-radio-group aria-label="Select an option" [(ngModel)]="radio">
+                    <mat-radio-button value="and" class='mat-radio'>AND</mat-radio-button>
+                    <mat-radio-button value="or">OR</mat-radio-button>
+                </mat-radio-group>
+              </div>
+
+              <div>
+                
+                <mat-form-field class="field-a">
+                    <mat-label>Operation</mat-label>
+                    <mat-select [(value)]="op2">
+                      <mat-option>None</mat-option>
+                      <mat-option value=">=">>=</mat-option>
+                      <mat-option value=">">></mat-option>
+                      <mat-option value="<="><=</mat-option>
+                      <mat-option value="<"><</mat-option>
+                      <mat-option value="==">==</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+  
+                  <mat-form-field class="field-a">
+                    <input matInput placeholder="Value" #ip2>    
+                  </mat-form-field>
+                  
+              </div>    
+
+            </div>
+        
+  
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success create-rule " data-dismiss="modal"  (click)='addFilter($event)'>Add Filter</button>
+                </div>
+
+          </div>
+    
+        </div>
+      </div>

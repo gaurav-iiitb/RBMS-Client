@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NavbarCmpComponent } from './navbar-cmp/navbar-cmp.component';
 import { LoginPortalComponent } from './login-portal/login-portal.component';
 import { HttpClientModule} from '@angular/common/http';
-import { MatTabsModule, MatTooltipModule, MatSlideToggle, MatButton, MatButtonToggleModule, MatIconModule, MatFormFieldModule, MatInputModule, MatOption, MatOptionModule, MatSelectModule, MatButtonModule } from '@angular/material';
+import { MatTabsModule, MatTooltipModule, MatSlideToggle, MatButton, MatButtonToggleModule, MatIconModule, MatFormFieldModule, MatInputModule, MatOption, MatOptionModule, MatSelectModule, MatButtonModule, MatRadioModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RuleDesignComponent } from './rule-design/rule-design.component';
 import { RuleDesignService } from './services/ruledesign.service';
@@ -40,6 +40,7 @@ import { AdminViewComponent } from './admin-view/admin-view.component';
     MatSelectModule,
     MatButtonModule,
     FormsModule,
+    MatRadioModule,
     RouterModule.forRoot([
       {
         path: 'login-portal',
