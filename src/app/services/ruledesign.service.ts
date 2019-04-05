@@ -10,9 +10,9 @@ import {Observable} from "rxjs/Observable";
 export class RuleDesignService implements OnInit {
 
 
-  readonly ROOT_URL_RULE = 'http://172.16.128.188:8090/createRule';
-  readonly ROOT_URL_USER = 'http://172.16.128.188:8090/createUser';
-  readonly ROOT_URL_INIT = 'http://172.16.128.188:8090/init';
+  readonly ROOT_URL_RULE = 'http://localhost:8090/createRule';
+  readonly ROOT_URL_USER = 'http://localhost:8090/createUser';
+  readonly ROOT_URL_INIT = 'http://localhost:8090/init';
 
   private acc_number: any;
   

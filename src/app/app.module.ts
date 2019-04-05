@@ -14,7 +14,7 @@ import { RuleDesignService } from './services/ruledesign.service';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { AdminViewComponent } from './admin-view/admin-view.component';
-
+import { Rule } from './models/rule';
 
 @NgModule({
   declarations: [
@@ -67,7 +67,7 @@ import { AdminViewComponent } from './admin-view/admin-view.component';
       }
     ])
   ],
-  providers: [RuleDesignService],
+  providers: [RuleDesignService, Rule],
   bootstrap: [AppComponent]
 }) 
 export class AppModule { }
