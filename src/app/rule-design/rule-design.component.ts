@@ -27,7 +27,7 @@ export class RuleDesignComponent implements OnInit {
   private data: Rule;
   private radio: any;
 
-  
+  private condition_list: Condition[] = [];
   @ViewChild('action') action: ElementRef;
   @ViewChild('ip1') ip1: ElementRef;
   @ViewChild('ip2') ip2: ElementRef;
@@ -54,7 +54,7 @@ export class RuleDesignComponent implements OnInit {
       this.radio = 'none';
     }
     condition = new Condition(this.element, this.radio, clause_temp);
-    this.data_int.setConditionList(condition);
+    this.condition_list.push(condition);
     
     this.element = 'None'; this.op1 = 'None';
     this.ip1.nativeElement.value = '';
@@ -85,11 +85,12 @@ export class RuleDesignComponent implements OnInit {
   async createRule(event: any) {
 
     let rhs = new RHS(this.action.nativeElement.value);
-    let lhs = new LHS(this.table, this.type, this.data_int.getConditionList());
+    let lhs = new LHS(this.table, this.type, this.condition_list);
     let rule = new Rules(lhs, rhs);
     let rule_list = new RuleList(rule);
+    this.condition_list = [];
 
-    console.log(rule_list);
+    console.log(rule);
 
     this.message = await this.getAsyncPromise(rule)
     
