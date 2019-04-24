@@ -17,22 +17,22 @@ import { DatainterchangeService } from '../services/datainterchange.service';
 })
 export class RuleDesignComponent implements OnInit {
 
-  private table: any;
-  private element: any;
-  private op1: any;
-  private op2: any;
-  private value: any;
-  private type: any;
-  private message: any;
-  private data: Rule;
-  private radio: any;
+  public table: any;
+  public element: any;
+  public op1: any;
+  public op2: any;
+  public value: any;
+  public type: any;
+  public message: any;
+  public data: Rule;
+  public radio: any;
 
-  private condition_list: Condition[] = [];
+  public condition_list: Condition[] = [];
   @ViewChild('action') action: ElementRef;
   @ViewChild('ip1') ip1: ElementRef;
   @ViewChild('ip2') ip2: ElementRef;
 
-  constructor(private rule: RuleDesignService, private data_int: DatainterchangeService) {}
+  constructor(public rule: RuleDesignService, public data_int: DatainterchangeService) {}
 
   ngOnInit() {
   }

@@ -8,8 +8,8 @@ import { RuleDesignService } from '../services/ruledesign.service';
 })
 export class CreateUserComponent implements OnInit {
 
-  private acc_num: any;
-  private acc_type: any;
+  public acc_num: any;
+  public acc_type: any;
   @ViewChild('fname') fname: ElementRef;
   @ViewChild('mname') mname: ElementRef;
   @ViewChild('lname') lname: ElementRef;
@@ -24,7 +24,7 @@ export class CreateUserComponent implements OnInit {
   @ViewChild('aadhar') aadhar: ElementRef;
   @ViewChild('amt') amt: ElementRef;
 
-  constructor(private rule: RuleDesignService) { }
+  constructor(public rule: RuleDesignService) { }
 
   ngOnInit() {
     this.acc_num = this.randomNumberGenerator();

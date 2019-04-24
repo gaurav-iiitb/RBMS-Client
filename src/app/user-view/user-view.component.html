@@ -6,26 +6,21 @@
 </div>
 
 <div class="text heavy">
-    <p> Account Number: {{acc_num}}</p>
-    <p> Account Holders ID: {{cust_id}}</p>
-    <p> Account Type: {{type}}</p>
-    <p> Current Balance: {{balance}}</p>
-    <p> Account Branch: {{branch}}</p>
+    <p> Account Number: </p>
+    <p> Account Holders Name: </p>
+    <p> Account Type: </p>
+    <p> Current Balance: </p>
+    <p> Account Branch: </p>
 </div>
 
 <div class="file-text">
-    <p>Transactions Available For Account Number: </p>
+    <p>Transaction History/E-Statement </p>
 </div>
 
 <div>
-    <div class='create-rule left'>
-        <button type="button" class="btn btn-success btn-size btn-text" data-toggle="modal" data-target="#addUser" (click)='debit($event)'>DEBIT</button>
-        
-      </div> 
-
+    
       <div class='create-rule left'>
-          <button type="button" class="btn btn-success btn-size btn-text" data-toggle="modal" data-target="#addUser" (click)='credit($event)'>CREDIT</button>
-          
+          <button type="button" class="btn btn-success btn-size btn-text" (click)='getTransactions($event)'>GET TRANSACTIONS</button>
       </div> 
 
 </div>
@@ -46,7 +41,7 @@
           </div>
           <div class="modal-body">
             <p class="text">Enter Transaction Amount.</p>
-            <input type="text" class="right" id="f-input" #value>
+            <input type="text" class="right" id="f-input">
           </div>
     
           <div class="modal-footer">

@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { RuleDesignService } from '../services/ruledesign.service';
 import { RouterModule, Router } from '@angular/router';
+import { DatainterchangeService } from '../services/datainterchange.service';
 
 @Component({
   selector: 'app-admin-view',
@@ -10,20 +11,42 @@ import { RouterModule, Router } from '@angular/router';
 export class AdminViewComponent implements OnInit {
 
   @ViewChild('acc_no') acc_number: ElementRef;
-  constructor(private rule: RuleDesignService, private router: Router) { }
+  constructor(private rule: RuleDesignService, private router: Router, private data: DatainterchangeService) { }
 
   ngOnInit() {
   }
 
-  getAccount(event: any) {
+  async getAccount(event: any) {
     
-    if(this.acc_number.nativeElement.value.length == 11) {
       this.rule.setAccNumber(this.acc_number.nativeElement.value);
-      this.router.navigate(['login-portal/admin-view/account-details']);
-    } else {
-      alert('Incorrect Account Number Entered.');
-    }
 
+      let message = await this.getAsync(this.acc_number.nativeElement.value);
+
+      if(message != null) {
+
+        this.data.setData(message);
+        this.router.navigate(['login-portal/admin-view/account-details']);
+      } else {
+        alert('There was some issue fetching account details. Please try again after some time. ');
+      }
+     
+  }
+
+  getAsync(data: any) {
+
+    const hasError: boolean = false;
+
+    let promise = new Promise((resolve, reject) => {
+      this.rule.getAccount(data).subscribe(val => {
+
+        if(hasError) {
+          reject();
+        } else {
+          resolve(val);
+        }
+      })
+    })
+    return promise;
   }
 
   createUser(event: any) {

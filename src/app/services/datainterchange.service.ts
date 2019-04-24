@@ -11,9 +11,17 @@ export class DatainterchangeService {
   private clause_list: Clause[] = [];
   private condition_list: Condition[] = [];
   private rule_list: Rules[] = [];
+  private data: any;
   
   constructor() { }
 
+  setData(data: any) {
+    this.data = data;
+  }
+
+  getData() {
+    return this.data;
+  }
 
   getClauseList() {
     return this.clause_list;

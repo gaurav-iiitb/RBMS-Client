@@ -15,6 +15,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { AdminViewComponent } from './admin-view/admin-view.component';
 import { Rule } from './models/rule';
+import { UserViewComponent } from './user-view/user-view.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { Rule } from './models/rule';
     RuleDesignComponent,
     CreateUserComponent,
     AccountDetailsComponent,
-    AdminViewComponent
+    AdminViewComponent,
+    UserViewComponent
   ],
   imports: [
     BrowserModule,
@@ -49,9 +51,14 @@ import { Rule } from './models/rule';
       {
         path: 'login-portal/rule-design',
         component: RuleDesignComponent
-      }, {
+      }, 
+      {
         path: 'login-portal/admin-view',
         component: AdminViewComponent 
+      },
+      {
+        path: 'login-portal/user-view',
+        component: UserViewComponent 
       },
       {
         path: 'login-portal/admin-view/create-user',

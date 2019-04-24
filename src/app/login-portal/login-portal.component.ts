@@ -47,8 +47,6 @@ export class LoginPortalComponent implements OnInit {
   //When Clicked on Rule Designer
   async ruleDesigner(event: any) { 
 
-    this.router.navigate(['login-portal/rule-design']);
-    /*
     if(this.medUsername.nativeElement.value=='admin' && this.medPassword.nativeElement.value=='admin') {
 
       let message = await this.AsyncResponse()
@@ -61,7 +59,7 @@ export class LoginPortalComponent implements OnInit {
     }
       
     else
-      alert('Incorrect Credentials.');  */
+      alert('Incorrect Credentials.');  
   } 
 
 
@@ -98,7 +96,7 @@ export class LoginPortalComponent implements OnInit {
   async userLogin(event: any) {
     console.log('User Login');
     if(this.medUsername.nativeElement.value=='user' && this.medPassword.nativeElement.value=='user') {
-      this.router.navigate(['login-portal/account-details']);
+      this.router.navigate(['login-portal/user-view']);
     } else {
       alert('Incorrect Credentials.');
     }
