@@ -26,11 +26,11 @@ export class AccountDetailsComponent implements OnInit {
     this.account = this.data.getData();
     console.log(this.account);
 
-    this.acc_num = this.account.acc_No;
-    this.cust_id = this.account.cust_ID;
-    this.type = this.account.acc_Type;
-    this.branch = this.account.branch_Code;
-    this.balance = this.account.acc_Balance;
+    this.acc_num = this.account.acc_no;
+    this.cust_id = this.account.cust_id;
+    this.type = this.account.acc_type;
+    this.branch = this.account.branch_code;
+    this.balance = this.account.acc_balance;
     this.count = this.account.transaction_count;
 
   }
